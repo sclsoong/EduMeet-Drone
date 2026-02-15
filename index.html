@@ -465,5 +465,53 @@
   <p style="margin-bottom: 1rem;"> 这一次，完全不同。 </p>
   <a href="https://sclsoong.github.io/EduMeet-DroneOS/" style="display: inline-block; background: #1a6f8c; color: white; padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none; font-weight: 600;">了解更多 →</a>
 </div>
-<!-- 社区版水印（可通过 JS 控制显示） -->
-<div id="community-watermark" class="watermark" style="display: block;">社区版 · EduMeet OS</div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMeet OS · 社区版</title>
+    <style>
+        /* 你原来的所有样式保持不变，只加上水印部分 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f7f9fc; color: #1e2a41; padding: 2rem; }
+        .container { max-width: 1280px; margin: 0 auto; background: white; border-radius: 40px; padding: 2.5rem; }
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: rgba(100, 120, 140, 0.25);
+            pointer-events: none;
+            user-select: none;
+            z-index: 9999;
+            transform: rotate(-5deg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        /* 其他样式...（你原来的完整样式） */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 你原来的所有内容，比如标题、卡片、壁纸、页脚等 -->
+        <h1>EduMeet OS</h1>
+        <p>这里是你的内容...</p>
+    </div>
+
+    <!-- 水印元素 -->
+    <div id="community-watermark" class="watermark">社区版 · EduMeet OS</div>
+
+    <!-- 控制脚本（可删除） -->
+    <script>
+        // 如果设置为 false，水印隐藏（模拟付费版）
+        window.SHOW_WATERMARK = true;
+        if (!window.SHOW_WATERMARK) {
+            document.getElementById('community-watermark').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
